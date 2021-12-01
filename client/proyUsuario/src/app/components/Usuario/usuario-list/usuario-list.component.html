@@ -1,0 +1,30 @@
+
+<table class="table caption-top">
+    <caption>Lista de usuarios.</caption>
+    <thead>
+      <tr>
+        <th scope="col">Cédula</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">N° Pasaporte</th>
+        <th scope="col">Correo</th>
+        <th scope="col">Teléfono</th>
+      </tr>
+    </thead>
+    <tbody
+    *ngFor="let u of usuarios; let i=index"
+    >
+  
+    
+  <tr>
+        <th scope="row">{{u.cedula}}</th>
+        <td>{{u.nombre}}</td>
+        <td>{{u.apellido}}</td>
+        <td>{{u.numPasaporte}}</td>
+        <td>{{u.correo}}</td>
+        <td>{{u.telefono}}</td>
+      </tr>
+      
+    
+    </tbody>
+  </table>
