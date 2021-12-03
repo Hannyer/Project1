@@ -35,12 +35,27 @@ export class LoginComponent implements OnInit {
       this.loading = false;
       this.tokenStorage.signOut();
     }
+    ingresar(){
+      const  username= this.form.value.usuario;
+      const password= this.form.value.password;
+
+    
+      if(username=="UTN"&&password=="123"){
+        this.simulacionLoading();  
+        }
+        else{
+          this.msg="Usuario y/o contraseña invalidad";
+          this.showMsg(this.msg);
+          this.form.reset;
+          
+        }
+    }
   
-    ingresar() {
+   /* ingresar() {
       const dataInput = {
         username: this.form.value.usuario,
         password: this.form.value.password
-      };
+      }
   
       //Llama al método de login
       this.userService.singin(dataInput)
@@ -52,10 +67,10 @@ export class LoginComponent implements OnInit {
             this.tokenStorage.saveUser(data);
   
             //Se valida si es un acceso u otro
-            if (data.user.role === 'user') {
-              this.router.navigateByUrl('/perfil');
+            if (data.user.rol === 'user') {
+              this.router.navigateByUrl('/usuario/');
             }
-            if (data.user.role === 'admin') {
+            if (data.user.rol === 'admin') {
               this.router.navigateByUrl('/dashboard');
             }
             this.loading = false;
@@ -70,7 +85,9 @@ export class LoginComponent implements OnInit {
            }
         });
     }
-  
+  */
+
+    
     showMsg(msg:string){
       this._snackbar.open(msg, 'Cerrar',{
         duration: 5000,
@@ -87,6 +104,7 @@ export class LoginComponent implements OnInit {
     this.loading = true;
     setTimeout(() => {
       this.ingresar();
+      this.router.navigateByUrl('/admin');
     }, 1000);
   }
 

@@ -10,7 +10,9 @@ const UsuarioSchema = new Schema(
     telefono:Number,
     correo:String,
     contrasenna:String,
-    direccion:String
+    direccion:String,
+    estado:Boolean,
+    rol:String
   },
   { timestamps: true }
 );

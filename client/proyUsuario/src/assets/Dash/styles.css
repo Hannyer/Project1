@@ -583,6 +583,7 @@ progress {
 .blockquote {
   margin-bottom: 1rem;
   font-size: 1.25rem;
+  
 }
 .blockquote > :last-child {
   margin-bottom: 0;
@@ -593,6 +594,7 @@ progress {
   margin-bottom: 1rem;
   font-size: 0.875em;
   color: #6c757d;
+  background-color: #343A40;
 }
 .blockquote-footer::before {
   content: "— ";
@@ -7853,7 +7855,9 @@ textarea.form-control-lg {
 
 .bg-light {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #212529 !important;
+  height: 9.4%;
+ /* background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;*/
 }
 
 .bg-dark {
@@ -11698,4 +11702,8 @@ body {
   width: 20px !important;
   font-size: 0.75rem;
   border-radius: 0.25rem !important;
+}
+
+#footer{
+  background-color: #343A40;
 }

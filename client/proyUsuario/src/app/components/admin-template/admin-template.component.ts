@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioListComponent } from '../Usuario/usuario-list/usuario-list.component';
 
 @Component({
   selector: 'app-admin-template',
@@ -13,3 +14,7 @@ export class AdminTemplateComponent implements OnInit {
   }
 
 }
+
+
+
+

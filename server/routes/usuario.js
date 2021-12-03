@@ -18,4 +18,8 @@ router.delete("/:id",usuarioController.delete);
 
 router.put("/:id", usuarioController.update);
 
+router.post("/signup", usuarioController.signup);
+
+router.post("/signin", usuarioController.signin);
+
 module.exports = router;

@@ -8,6 +8,7 @@ import { UsuarioDetailsComponent } from './components/Usuario/usuario-details/us
 import { UsuarioListComponent } from './components/Usuario/usuario-list/usuario-list.component';
 
 
+
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { AdminTemplateComponent } from './components/admin-template/admin-template.component';
@@ -18,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //modulos compoartidos
 import {SharedModule} from './components/Share/shared.module';
+import { ClientTemplateComponent } from './components/client-template/client-template.component';
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import {SharedModule} from './components/Share/shared.module';
     AdminTemplateComponent,
     InicioComponent,
     LoginComponent,
+    ClientTemplateComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +41,20 @@ import {SharedModule} from './components/Share/shared.module';
     BrowserAnimationsModule,
     SharedModule
 
+  ],exports:[
+    AppComponent,
+    AddUsuarioComponent,
+    UsuarioDetailsComponent,
+    UsuarioListComponent,
+    AdminTemplateComponent,
+    InicioComponent,
+    LoginComponent,
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    SharedModule
 
   ],
   providers: [],

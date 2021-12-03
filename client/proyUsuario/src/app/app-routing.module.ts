@@ -7,10 +7,18 @@ import { AddUsuarioComponent } from './components/Usuario/add-usuario/add-usuari
 import { Usuario } from './models/usuario.model';
 import { AdminTemplateComponent } from './components/admin-template/admin-template.component'; 
 import { LoginComponent } from './components/login/login.component';
+import { InicioComponent } from './components/inicio/inicio.component';
+
+
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent}
- 
+  { path: 'login', component: LoginComponent},
+  {path: 'admin', component: AdminTemplateComponent, children: [
+    { path: 'inicio', component: InicioComponent },
+    {path:'UsuarioLista',component:UsuarioListComponent}
+  
+  ]},
+  //{path:"**",redirectTo:'/admin-template', pathMatch:'full'}
 
 ];
 

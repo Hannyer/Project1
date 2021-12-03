@@ -10,4 +10,6 @@ export class Usuario {
     correo?:String;
     contrasenna?:String;
     direccion?:String;
+    estado?:Boolean;
+    rol?:String;
 }

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {Usuario}from 'src/app/models/usuario.model';
 import{UsuarioService}from 'src/app/services/usuario.service'
 
+
 @Component({
   selector: 'app-usuario-list',
   templateUrl: './usuario-list.component.html',
@@ -17,7 +18,7 @@ export class UsuarioListComponent implements OnInit {
   ngOnInit(): void {
     this.listaUsuario();
   }
-
+ 
 
 
 listaUsuario():void{
