@@ -20,6 +20,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //modulos compoartidos
 import {SharedModule} from './components/Share/shared.module';
 import { ClientTemplateComponent } from './components/client-template/client-template.component';
+import { NosotrosComponent } from './components/nosotros/nosotros.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import { ClientTemplateComponent } from './components/client-template/client-tem
     InicioComponent,
     LoginComponent,
     ClientTemplateComponent,
+    NosotrosComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

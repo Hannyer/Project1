@@ -1,6 +1,12 @@
 .table{
     width: 50%;
 margin:auto;
-color:#ff0000;
+color:black;
+}
+caption{
+    font-size: 25px;
+}
+table{
+    border: solid 2px black;
 }
 

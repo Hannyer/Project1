@@ -17,12 +17,24 @@
   
     
   <tr>
-        <th scope="row">{{u.cedula}}</th>
+        <td scope="row">{{u.cedula}}</td>
         <td>{{u.nombre}}</td>
         <td>{{u.apellido}}</td>
         <td>{{u.numPasaporte}}</td>
         <td>{{u.correo}}</td>
         <td>{{u.telefono}}</td>
+        <td> <a  routerLink="/admin/modificarUsuario">
+          <mat-icon
+          mat-raised-button #tooltip="matTooltip"
+          matTooltip="Editar información"
+          class="cursorPointer" style="color: #d49c18;">edit</mat-icon>
+      </a>
+      <a href="#"> 
+          <mat-icon 
+          mat-raised-button #tooltip="matTooltip"
+          matTooltip="Eliminar información"
+          class="cursorPointer" style="color: #af1313;">delete</mat-icon>
+      </a> </td>
       </tr>
       
     
