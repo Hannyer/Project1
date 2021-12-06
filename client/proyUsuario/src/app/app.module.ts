@@ -24,6 +24,10 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { HomeComponent } from './components/home/home.component';
 
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CarruselComponent } from './components/carrusel/carrusel.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +40,8 @@ import { HomeComponent } from './components/home/home.component';
     ClientTemplateComponent,
     NosotrosComponent,
     HomeComponent,
+    CarruselComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,9 @@ import { HomeComponent } from './components/home/home.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    NgbModule,
+   
 
   ],exports:[
     AppComponent,
@@ -58,7 +66,8 @@ import { HomeComponent } from './components/home/home.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    CarruselComponent
 
   ],
   providers: [],

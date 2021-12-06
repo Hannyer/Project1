@@ -10,19 +10,31 @@ import { LoginComponent } from './components/login/login.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import{HomeComponent} from './components/home/home.component';
+import { CarruselComponent } from './components/carrusel/carrusel.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  {path:'home',component:HomeComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+
+  
+  {path:'home',component:HomeComponent,children:[
+    { path: 'carrusel', component: CarruselComponent},
+  ]},
+
   { path: 'login', component: LoginComponent},
+  { path: 'carrusel', component: CarruselComponent},
+
   {path: 'admin', component: AdminTemplateComponent, children: [
     { path: 'inicio', component: InicioComponent },
     {path:'UsuarioLista',component:UsuarioListComponent},
-    { path: 'modificarUsuario', component: AddUsuarioComponent},
+   
     { path: 'nosotros', component: NosotrosComponent},
+
   
   ]},
+
+  { path: 'registrar', component: AddUsuarioComponent},
+  
  
   //{path:"**",redirectTo:'/admin-template', pathMatch:'full'}
 
