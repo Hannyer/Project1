@@ -31,7 +31,7 @@ const routes: Routes = [
     { path: 'inicio', component: InicioComponent },
     {path: 'modal',component:NgbdModalComponent},
     {path:'UsuarioLista',component:UsuarioListComponent},
-   
+    { path: 'registrar', component: AddUsuarioComponent},
     { path: 'nosotros', component: NosotrosComponent},
 
   

@@ -1,10 +1,13 @@
-<div>
+<br><br/>
+
+<div class="shadow-lg p-3 mb-5 rounded" style=" width: 50%; margin-right: auto; margin-left: auto; background-color:  #e6f7ff;">
+  <div style="padding-left: 9%; margin-left: auto; margin-right: auto; width: 50%; font-family: Arial;"><h2>Registrar Usuarios</h2></div>
     <div class="submit-form">
       <div *ngIf="!submitted">
 
 
         <div class="form-group">
-            <label for="cedula">Número de cédula</label>
+            <label style="font-family: Arial;" for="cedula"><strong>Número de cédula</strong></label>
             <input
               type="text"
               class="form-control"
@@ -17,7 +20,7 @@
 
 
         <div class="form-group">
-            <label for="nombre">Nombre</label>
+            <label style="font-family: Arial;" for="nombre"><strong>Nombre</strong></label>
             <input
               type="text"
               class="form-control"
@@ -29,7 +32,7 @@
         </div>
 
         <div class="form-group">
-            <label for="apellido">Apellidos</label>
+            <label style="font-family: Arial;" for="apellido"><strong>Apellidos</strong></label>
             <input
               type="text"
               class="form-control"
@@ -41,7 +44,7 @@
         </div>
 
         <div class="form-group">
-        <label for="numPasaporte">N° de pasaporte</label>
+        <label style="font-family: Arial;" for="numPasaporte"><strong>N° de Pasaporte</strong></label>
             <input
               type="text"
               class="form-control"
@@ -53,7 +56,7 @@
         </div>
 
         <div class="form-group">
-            <label for="edad">Edad</label>
+            <label style="font-family: Arial;" for="edad"><strong>Edad</strong></label>
                 <input
                   type="text"
                   class="form-control"
@@ -67,7 +70,7 @@
          
 
                 <div class="form-group">
-                    <label for="nacionalidad"> Nacionalidad</label>
+                    <label style="font-family: Arial;" for="nacionalidad"><strong>Nacionalidad</strong></label>
                         <input
                           type="text"
                           class="form-control"
@@ -79,7 +82,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="telefono"> telefono</label>
+                        <label style="font-family: Arial;" for="telefono"><strong>Teléfono</strong></label>
                             <input
                               type="text"
                               class="form-control"
@@ -91,7 +94,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="correo">Correo</label>
+                            <label style="font-family: Arial;" for="correo"><strong>Correo</strong></label>
                                 <input
                                   type="text"
                                   class="form-control"
@@ -103,9 +106,9 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="contrasenna"> Contraseña</label>
+                                <label style="font-family: Arial;" for="contrasenna"><strong>Contraseña</strong></label>
                                     <input
-                                      type="text"
+                                      type="password"
                                       class="form-control"
                                       id="contrasenna"
                                       required
@@ -114,7 +117,7 @@
                                     />
                                 </div>
                                 <div class="form-group">
-                                    <label for="direccion"> Dirección</label>
+                                    <label style="font-family: Arial;" for="direccion"><strong>Dirección</strong></label>
                                         <input
                                           type="text"
                                           class="form-control"
@@ -125,14 +128,18 @@
                                         />
                                     </div>
         <br>
-        <button (click)="saveUsuario()" class="btn btn-success">Guardar Usuario</button>
+        <button style="margin-left: 30%;" (click)="saveUsuario()" class="btn btn-primary">Guardar Usuario</button>
+        <br><br/>
       </div>
   
       <div *ngIf="submitted">
         <h4>Los datos del usuario fueron registrados correctamente!</h4>
-        <button class="btn btn-success" (click)="newUsuario()">Agregar nueva factura</button>
+        <button style="margin-left: 25%;" class="btn btn-primary" (click)="newUsuario()">Agregar Nuevo Usuario</button>
+        <br><br/>
       </div>
+      
     </div>
  
 
  </div>
+ <br><br/>
