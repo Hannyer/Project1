@@ -23,6 +23,7 @@ import {SharedModule} from './components/Share/shared.module';
 import { ClientTemplateComponent } from './components/client-template/client-template.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { HomeComponent } from './components/home/home.component';
+import {NgbPaginationConfig} from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -55,7 +56,8 @@ import { NgbdModalComponent } from './components/modal/modal.component';
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
-    NgbModule
+    NgbModule,
+    NgbPaginationConfig
 ],exports:[
     AppComponent,
     AddUsuarioComponent,
@@ -72,6 +74,7 @@ import { NgbdModalComponent } from './components/modal/modal.component';
     SharedModule,
     CarruselComponent,
     NgbdModalComponent,
+    NgbPaginationConfig
     
 ],
   providers: [],
