@@ -77,7 +77,7 @@
       matTooltip="Editar información"
       class="cursorPointer" style="color: #d49c18;">edit</mat-icon>
   </a>
-  <a href="#"> 
+  <a (click)="eliminarUsuario(u._id);"> 
       <mat-icon 
       mat-raised-button #tooltip="matTooltip"
       matTooltip="Eliminar información"

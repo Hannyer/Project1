@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MatSnackBar } from '@angular/material/snack-bar';
 import {Usuario}from 'src/app/models/usuario.model';
 import{UsuarioService}from 'src/app/services/usuario.service'
 
@@ -21,7 +21,7 @@ export class UsuarioListComponent implements OnInit {
 
   usuarios?:Usuario[];
 
-  constructor(private usuarioService:UsuarioService) {
+  constructor(private usuarioService:UsuarioService, private _snackbar: MatSnackBar) {
    
    }
 
@@ -63,6 +63,24 @@ this.usuarioService.getAll().subscribe({
 
 }
 
+eliminarUsuario(_id:any){
+  console.log(_id);
+  this.usuarioService.delete(_id)
+    .subscribe({
+       next: (data) => {
+         this.listaUsuario();
+         console.log(data);
+        
+         this._snackbar.open('El Usuario fue eliminado', '',{
+            duration: 5000,
+            horizontalPosition: 'center',
+            verticalPosition: 'bottom'
+          });
+
+       },
+       error: (e: any) => console.error(e)
+    });
+}
 
 
 }
