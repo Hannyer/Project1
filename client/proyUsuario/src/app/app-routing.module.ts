@@ -11,6 +11,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import{HomeComponent} from './components/home/home.component';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
+import { NgbdModalComponent } from './components/modal/modal.component';
+
 
 
 const routes: Routes = [
@@ -25,7 +27,9 @@ const routes: Routes = [
   { path: 'carrusel', component: CarruselComponent},
 
   {path: 'admin', component: AdminTemplateComponent, children: [
+    { path: '', redirectTo: '/admin/inicio', pathMatch: 'full' },
     { path: 'inicio', component: InicioComponent },
+    {path: 'modal',component:NgbdModalComponent},
     {path:'UsuarioLista',component:UsuarioListComponent},
    
     { path: 'nosotros', component: NosotrosComponent},

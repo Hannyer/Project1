@@ -1,9 +1,10 @@
 main{
-    background-color: #e6e6e6;
+    background-color: #E6E3DE;
     height: 100%;
    
 }
 
-#foot{
-    background-color: #343A40;
+
+footer{
+    background-color: #212529 !important;
 }

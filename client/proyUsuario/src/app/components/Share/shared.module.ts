@@ -55,7 +55,9 @@ import { HttpClientModule } from '@angular/common/http';
         HttpClientModule,
         MatCardModule,
         MatGridListModule,
-        MatDialogModule
+        MatDialogModule,
+        
+        
 
     ],
 

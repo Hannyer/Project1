@@ -1,22 +1,27 @@
 
+<!--
+<br/>
+
 <table class="table caption-top">
-    <caption>Lista de usuarios.</caption>
+  
+    
+    
     <thead>
+      <caption>Lista de usuarios.</caption>
       <tr>
+       
         <th scope="col">Cédula</th>
         <th scope="col">Nombre</th>
         <th scope="col">Apellido</th>
-        <th scope="col">N° Pasaporte</th>
+        <th class="cm" scope="col">N° Pasaporte</th>
         <th scope="col">Correo</th>
         <th scope="col">Teléfono</th>
+        <th class="cm" scope="col">Seleccione una opción</th>
       </tr>
     </thead>
     <tbody
     *ngFor="let u of usuarios; let i=index"
-    >
-  
-    
-  <tr>
+    ><tr>
         <td scope="row">{{u.cedula}}</td>
         <td>{{u.nombre}}</td>
         <td>{{u.apellido}}</td>
@@ -34,9 +39,58 @@
           mat-raised-button #tooltip="matTooltip"
           matTooltip="Eliminar información"
           class="cursorPointer" style="color: #af1313;">delete</mat-icon>
-      </a> </td>
-      </tr>
-      
-    
+      </a> </td></tr>
     </tbody>
-  </table>
+    </table>
+   
+
+-->
+<div style=" padding: 1%; width: 69%; color: white; background-color: #343A40; border: solid black 2px; margin-left: auto; margin-right: auto; text-align: center; font-size: 25px; margin-top: 2%;" class="title">Lista de usuarios</div>
+<div class="scroll">
+<table class="table table-striped" border="2">
+ 
+  <thead>
+  
+   
+  <tr style="width: 100px;">
+    <th style="width: 1000px !important;" scope="col">Céddula</th>
+    <th scope="col">Nombre</th>
+    <th scope="col">N° Pasaporte</th>
+    <th scope="col">Correo</th>
+    <th scope="col">telefono</th>
+    <th scope="col">Seleccione</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr style="width: 1000px !important;" *ngFor="let u of usuarios">
+    <th> <div style="min-width: 100px;">{{ u.cedula }}</div></th>
+    <td >
+     
+    <div class="" style="min-width: 230px;">  {{ u.nombre }} {{u.apellido}}</div>
+    </td>
+    <td><div style="min-width: 120px;"> {{ u.numPasaporte}}</div></td>
+    <td><div style="min-width: 100px;">{{ u.correo }}</div></td>
+    <td>{{ u.telefono }}</td>
+    <td><a>
+      <mat-icon
+      mat-raised-button #tooltip="matTooltip"
+      matTooltip="Editar información"
+      class="cursorPointer" style="color: #d49c18;">edit</mat-icon>
+  </a>
+  <a href="#"> 
+      <mat-icon 
+      mat-raised-button #tooltip="matTooltip"
+      matTooltip="Eliminar información"
+      class="cursorPointer" style="color: #af1313;">delete
+      </mat-icon>
+  </a>
+
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+</div>
+
+

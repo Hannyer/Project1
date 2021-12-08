@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AddUsuarioComponent } from './components/Usuario/add-usuario/add-usuario.component';
@@ -24,8 +25,11 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { HomeComponent } from './components/home/home.component';
 
 
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
+import { NgbdModalComponent } from './components/modal/modal.component';
+
 
 
 @NgModule({
@@ -41,6 +45,7 @@ import { CarruselComponent } from './components/carrusel/carrusel.component';
     NosotrosComponent,
     HomeComponent,
     CarruselComponent,
+   NgbdModalComponent
     
   ],
   imports: [
@@ -50,10 +55,8 @@ import { CarruselComponent } from './components/carrusel/carrusel.component';
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
-    NgbModule,
-   
-
-  ],exports:[
+    NgbModule
+],exports:[
     AppComponent,
     AddUsuarioComponent,
     UsuarioDetailsComponent,
@@ -67,9 +70,10 @@ import { CarruselComponent } from './components/carrusel/carrusel.component';
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
-    CarruselComponent
-
-  ],
+    CarruselComponent,
+    NgbdModalComponent,
+    
+],
   providers: [],
   bootstrap: [AppComponent]
 })
