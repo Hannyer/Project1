@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { UsuarioListComponent } from './components/Usuario/usuario-list/usuario-list.component';
-import { UsuarioDetailsComponent } from './components/Usuario/usuario-details/usuario-details.component';
+
 import { AddUsuarioComponent } from './components/Usuario/add-usuario/add-usuario.component';
 import { Usuario } from './models/usuario.model';
 import { AdminTemplateComponent } from './components/admin-template/admin-template.component'; 
@@ -12,6 +12,7 @@ import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import{HomeComponent} from './components/home/home.component';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { NgbdModalComponent } from './components/modal/modal.component';
+import { VueloListComponent } from './components/Vuelos/vuelo-list/vuelo-list.component';
 
 
 
@@ -33,6 +34,7 @@ const routes: Routes = [
     {path:'UsuarioLista',component:UsuarioListComponent},
     { path: 'registrar', component: AddUsuarioComponent},
     { path: 'nosotros', component: NosotrosComponent},
+    {path:'listaVuelos',component:VueloListComponent}
 
   
   ]},

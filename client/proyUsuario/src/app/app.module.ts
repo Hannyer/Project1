@@ -23,13 +23,17 @@ import {SharedModule} from './components/Share/shared.module';
 import { ClientTemplateComponent } from './components/client-template/client-template.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { HomeComponent } from './components/home/home.component';
-import {NgbPaginationConfig} from '@ng-bootstrap/ng-bootstrap';
+
 
 
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { NgbdModalComponent } from './components/modal/modal.component';
+import { VueloListComponent } from './components/Vuelos/vuelo-list/vuelo-list.component';
+import { AddVueloComponent } from './components/Vuelos/add-vuelo/add-vuelo.component';
+
+
 
 
 
@@ -46,7 +50,9 @@ import { NgbdModalComponent } from './components/modal/modal.component';
     NosotrosComponent,
     HomeComponent,
     CarruselComponent,
-   NgbdModalComponent
+   NgbdModalComponent,
+   VueloListComponent,
+   AddVueloComponent
     
   ],
   imports: [
@@ -57,7 +63,8 @@ import { NgbdModalComponent } from './components/modal/modal.component';
     BrowserAnimationsModule,
     SharedModule,
     NgbModule,
-    NgbPaginationConfig
+    
+  
 ],exports:[
     AppComponent,
     AddUsuarioComponent,
@@ -74,7 +81,8 @@ import { NgbdModalComponent } from './components/modal/modal.component';
     SharedModule,
     CarruselComponent,
     NgbdModalComponent,
-    NgbPaginationConfig
+  
+   
     
 ],
   providers: [],

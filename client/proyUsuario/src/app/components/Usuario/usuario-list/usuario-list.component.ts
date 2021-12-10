@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+
 import { MatSnackBar } from '@angular/material/snack-bar';
 import {Usuario}from 'src/app/models/usuario.model';
 import{UsuarioService}from 'src/app/services/usuario.service'
+
 
 
 @Component({
@@ -45,6 +47,30 @@ export class UsuarioListComponent implements OnInit {
       error:(e:any)=>console.error(e.message)
     })};
 
+   /*search(text: string, pipe: PipeTransform): Country[] {
+      return this.usuarios.filter(country => {
+        const term = text.toLowerCase();
+        return country.name.toLowerCase().includes(term)
+            || pipe.transform(country.area).includes(term)
+            || pipe.transform(country.population).includes(term);
+      });
+    }
+    */
+     
+  filtrarUsers(cedula:number) {
+
+    this.usuarioService.getAll().subscribe({
+      next:(data)=>{
+    
+        
+        this.usuarios=data.filter(dat=>dat.cedula==cedula);
+      
+        console.log(data);
+    
+      },
+      error:(e:any)=>console.error(e.message)
+    })};
+
   
 
 
@@ -52,7 +78,7 @@ export class UsuarioListComponent implements OnInit {
 listaUsuario():void{
 this.usuarioService.getAll().subscribe({
   next:(data)=>{
-
+    
     this.usuarios=data;
     console.log(data);
 
@@ -62,7 +88,6 @@ this.usuarioService.getAll().subscribe({
 
 
 }
-
 eliminarUsuario(_id:any){
   console.log(_id);
   this.usuarioService.delete(_id)

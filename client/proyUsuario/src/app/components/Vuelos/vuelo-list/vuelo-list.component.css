@@ -1,0 +1,56 @@
+
+
+
+.table{
+    width: 50%;
+margin:auto;
+color:black;
+}
+caption{
+    font-size: 25px;
+}
+table{
+    border: solid 2px black;
+   
+    border:2px solid;
+    padding:10px 40px; 
+    width:300px;
+    resize:both;
+    overflow:auto;
+}
+
+.cell{
+    min-width: 150px;
+}
+
+th, td   
+ {
+    resize: both !important; overflow: auto I !important;
+    width: 25% !important;
+    text-align: left !important;
+    vertical-align: top !important;
+    border: 1px solid #000 !important;
+ }
+
+
+ table td:first-child {
+     min-width: none;
+    width: 1000px ;
+  }
+ caption {
+    padding: 0.3em;
+    color: #fff;
+     background: #000;
+     width:100%;
+     max-width:100000px;
+     
+ }
+tr{
+width: 100px;
+border: solid 1px black;
+
+}
+
+.cm{
+    width: 100px;
+}
